@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# 
+# Start of session at: Tue Mar  3 02:23:06 2020
+# Process ID: 6524
+# Current directory: /media/Second/workspace/Research/bus_test/bus_test.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /media/Second/workspace/Research/bus_test/bus_test.sdk/webtalk/webtalk.log
+# Journal file: /media/Second/workspace/Research/bus_test/bus_test.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
