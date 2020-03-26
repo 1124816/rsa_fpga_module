@@ -64,11 +64,20 @@ reg reset;
 reg state = 1'b0;
 wire ready;
 
+reg osc_bank_address;
+reg osc_bank_count;
+
 Selector#(.RSA_WIDTH(RSA_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH))Selector1(
     .SELECT_IN(rsa_key_select),
     .M_OUT(m),
     .E_OUT(e),
     .N_OUT(n)
+);
+
+OscBank#(.COUNTER_LENGTH(128), .BANK_SIZE(16), .ADDRESS_SIZE(4))osc_bank1(
+    .RESET(S_AXI_ARESETN),
+    .ADDRESS(osc_bank_address),
+    .COUNT(osc_bank_count)
 );
 
 Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH))AxiSupporter1(

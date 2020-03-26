@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 02/05/2020 01:48:33 AM
+// Create Date: 01/24/2020 03:36:25 PM
 // Design Name: 
-// Module Name: wrapper
+// Module Name: top
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,26 +20,25 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module osc (
-    input reset,
-    output wire out
-    );
-    
-    wire invert;
+module osc_counter#(COUNTER_LENGTH=128)(
+    // Axi4Lite Bus
+    input       RESET,
+    output reg  [COUNTER_LENGTH-1:0] COUNT
+);
 
-    LUT2 #(
-        .INIT(4'b1000)
-    ) LUT_and (
-        .O(out),
-        .IO(~ reset),
-        .I1(invert)
-    );
+osc osc(
+    .RESET(RESET),
+    .OUT(osc_clk)
+);
 
-    LUT2 #(
-        .INIT(1'b01)
-    ) LUT_not (
-        .O(invert),
-        .IO(out)
-    );
+wire osc_clk;
+
+always @ (posedge osc_clk)begin
+    if(RESET == 1)begin
+        COUNT <= 0;
+    end else begin
+        COUNT = COUNT + 1;
+    end
+end
 
 endmodule
