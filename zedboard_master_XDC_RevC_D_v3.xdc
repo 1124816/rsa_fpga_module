@@ -79,7 +79,7 @@ set_property PACKAGE_PIN AB5 [get_ports {AC_SDA}];  # "AC-SDA"
 # ----------------------------------------------------------------------------
 # Clock Source - Bank 13
 # ---------------------------------------------------------------------------- 
-set_property PACKAGE_PIN Y9 [get_ports {clk_0}];  # "GCLK"
+set_property PACKAGE_PIN Y9 [get_ports {CLOCK}];  # "GCLK"
 
 # ----------------------------------------------------------------------------
 # JA Pmod - Bank 13

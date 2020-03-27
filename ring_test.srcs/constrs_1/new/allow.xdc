@@ -1,0 +1,1 @@
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets osc/osc_clk]
