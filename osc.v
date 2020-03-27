@@ -31,15 +31,15 @@ module osc (
         .INIT(4'b1000)
     ) LUT_and (
         .O(out),
-        .IO(~ reset),
+        .I0(~ reset),
         .I1(invert)
     );
 
-    LUT2 #(
+    LUT1 #(
         .INIT(1'b01)
     ) LUT_not (
         .O(invert),
-        .IO(out)
+        .I0(out)
     );
 
 endmodule

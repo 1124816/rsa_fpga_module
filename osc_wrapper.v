@@ -27,8 +27,8 @@ module osc_counter#(COUNTER_LENGTH=128)(
 );
 
 osc osc(
-    .RESET(RESET),
-    .OUT(osc_clk)
+    .reset(RESET),
+    .out(osc_clk)
 );
 
 wire osc_clk;
