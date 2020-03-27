@@ -33,16 +33,16 @@ module bench (
     output  LD7
 );
 
-reg [35:0] count = 32'b00000000000000000000000000000000000;
+reg [42:0] count = 43'b0000000000000000000000000000000000000000000;
     
-assign LD0 = count[35]; 
-assign LD1 = count[34];
-assign LD2 = count[33];
-assign LD3 = count[32];
-assign LD4 = count[31];
-assign LD5 = count[30];
-assign LD6 = count[29];
-assign LD7 = count[28];
+assign LD0 = count[42]; 
+assign LD1 = count[41];
+assign LD2 = count[40];
+assign LD3 = count[39];
+assign LD4 = count[38];
+assign LD5 = count[37];
+assign LD6 = count[36];
+assign LD7 = count[35];
 
 wire osc_clk;
 
@@ -53,7 +53,7 @@ osc osc(
 
 always @ (posedge osc_clk)begin
     if(BTNC == 1)begin
-        count = 35'b00000000000000000000000000000000000;
+        count = 43'b0000000000000000000000000000000000000000000;
     end else begin
         count <= count + 1; 
     end

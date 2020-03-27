@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu Mar 26 21:26:41 2020
+| Date         : Fri Mar 27 14:18:26 2020
 | Host         : manjaro running 64-bit Manjaro Linux
 | Command      : report_timing_summary -max_paths 10 -file bench_timing_summary_routed.rpt -pb bench_timing_summary_routed.pb -rpx bench_timing_summary_routed.rpx -warn_on_violation
 | Design       : bench
@@ -53,7 +53,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 36 register/latch pins with no clock driven by root clock pin: BTNC (HIGH)
+ There are 43 register/latch pins with no clock driven by root clock pin: BTNC (HIGH)
 
 
 2. checking constant_clock
@@ -68,7 +68,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 72 pins that are not constrained for maximum delay. (HIGH)
+ There are 86 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
