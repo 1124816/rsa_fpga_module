@@ -40,6 +40,7 @@ set_property used_in_implementation false [get_files -all /media/Second/workspac
 set_property used_in_implementation false [get_files -all /media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1_board.xdc]
 set_property used_in_implementation false [get_files -all /media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1.xdc]
 set_property used_in_implementation false [get_files -all /media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/design_1_top_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 

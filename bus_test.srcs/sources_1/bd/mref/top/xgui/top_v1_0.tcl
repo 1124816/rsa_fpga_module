@@ -9,7 +9,9 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "INITIAL" -parent ${Page_0}
   ipgui::add_param $IPINST -name "KEY_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "MEM_WIDTH" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "READY_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "READ_MAX" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "RESULT_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "RSA_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "START_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS" -parent ${Page_0}
@@ -71,12 +73,30 @@ proc validate_PARAM_VALUE.MEM_WIDTH { PARAM_VALUE.MEM_WIDTH } {
 	return true
 }
 
+proc update_PARAM_VALUE.READY_ADDR { PARAM_VALUE.READY_ADDR } {
+	# Procedure called to update READY_ADDR when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.READY_ADDR { PARAM_VALUE.READY_ADDR } {
+	# Procedure called to validate READY_ADDR
+	return true
+}
+
 proc update_PARAM_VALUE.READ_MAX { PARAM_VALUE.READ_MAX } {
 	# Procedure called to update READ_MAX when any of the dependent parameters in the arguments change
 }
 
 proc validate_PARAM_VALUE.READ_MAX { PARAM_VALUE.READ_MAX } {
 	# Procedure called to validate READ_MAX
+	return true
+}
+
+proc update_PARAM_VALUE.RESULT_ADDR { PARAM_VALUE.RESULT_ADDR } {
+	# Procedure called to update RESULT_ADDR when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.RESULT_ADDR { PARAM_VALUE.RESULT_ADDR } {
+	# Procedure called to validate RESULT_ADDR
 	return true
 }
 
@@ -146,6 +166,16 @@ proc update_MODELPARAM_VALUE.START_ADDR { MODELPARAM_VALUE.START_ADDR PARAM_VALU
 proc update_MODELPARAM_VALUE.KEY_ADDR { MODELPARAM_VALUE.KEY_ADDR PARAM_VALUE.KEY_ADDR } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.KEY_ADDR}] ${MODELPARAM_VALUE.KEY_ADDR}
+}
+
+proc update_MODELPARAM_VALUE.READY_ADDR { MODELPARAM_VALUE.READY_ADDR PARAM_VALUE.READY_ADDR } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.READY_ADDR}] ${MODELPARAM_VALUE.READY_ADDR}
+}
+
+proc update_MODELPARAM_VALUE.RESULT_ADDR { MODELPARAM_VALUE.RESULT_ADDR PARAM_VALUE.RESULT_ADDR } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.RESULT_ADDR}] ${MODELPARAM_VALUE.RESULT_ADDR}
 }
 
 proc update_MODELPARAM_VALUE.MEM_WIDTH { MODELPARAM_VALUE.MEM_WIDTH PARAM_VALUE.MEM_WIDTH } {

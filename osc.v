@@ -21,8 +21,8 @@
 
 
 module osc (
-    input reset,
-    output wire out
+    input RESET,
+    output wire OUT
     );
     
     wire invert;
@@ -30,8 +30,8 @@ module osc (
     LUT2 #(
         .INIT(4'b1000)
     ) LUT_and (
-        .O(out),
-        .I0(~ reset),
+        .O(OUT),
+        .I0(~ RESET),
         .I1(invert)
     );
 
@@ -39,7 +39,7 @@ module osc (
         .INIT(1'b01)
     ) LUT_not (
         .O(invert),
-        .I0(out)
+        .I0(OUT)
     );
 
 endmodule

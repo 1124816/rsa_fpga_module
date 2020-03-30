@@ -23,18 +23,20 @@
 module osc_counter#(COUNTER_LENGTH=128)(
     // Axi4Lite Bus
     input       RESET,
+    input       COUNT_RESET,
     output reg  [COUNTER_LENGTH-1:0] COUNT
-);
-
-osc osc(
-    .reset(RESET),
-    .out(osc_clk)
 );
 
 wire osc_clk;
 
+osc osc(
+    .RESET(RESET),
+    .OUT(osc_clk)
+);
+
+
 always @ (posedge osc_clk)begin
-    if(RESET == 1)begin
+    if(COUNT_RESET == 1)begin
         COUNT <= 0;
     end else begin
         COUNT = COUNT + 1;

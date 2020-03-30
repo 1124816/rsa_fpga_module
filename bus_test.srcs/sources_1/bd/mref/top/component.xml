@@ -223,7 +223,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2cedfe69</spirit:value>
+            <spirit:value>71638019</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -236,7 +236,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2cedfe69</spirit:value>
+            <spirit:value>71638019</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -595,6 +595,16 @@
         <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.KEY_ADDR" spirit:bitStringLength="32">0x0000FFF8</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>READY_ADDR</spirit:name>
+        <spirit:displayName>Ready Addr</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.READY_ADDR" spirit:bitStringLength="32">0x0000FFF4</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>RESULT_ADDR</spirit:name>
+        <spirit:displayName>Result Addr</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.RESULT_ADDR" spirit:bitStringLength="32">0x0000FFF0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>MEM_WIDTH</spirit:name>
         <spirit:displayName>Mem Width</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MEM_WIDTH">16</spirit:value>
@@ -619,7 +629,7 @@
       <spirit:file>
         <spirit:name>xgui/top_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_068f9a6d</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_790cdd2a</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -667,6 +677,16 @@
       <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.KEY_ADDR" spirit:bitStringLength="32">0x0000FFF8</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
+      <spirit:name>READY_ADDR</spirit:name>
+      <spirit:displayName>Ready Addr</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.READY_ADDR" spirit:bitStringLength="32">0x0000FFF4</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>RESULT_ADDR</spirit:name>
+      <spirit:displayName>Result Addr</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.RESULT_ADDR" spirit:bitStringLength="32">0x0000FFF0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
       <spirit:name>MEM_WIDTH</spirit:name>
       <spirit:displayName>Mem Width</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.MEM_WIDTH">16</spirit:value>
@@ -691,12 +711,13 @@
       </xilinx:taxonomies>
       <xilinx:displayName>top_v1_0</xilinx:displayName>
       <xilinx:autoFamilySupportLevel>level_1</xilinx:autoFamilySupportLevel>
+      <xilinx:supportsAutoXDC>dynamic_params</xilinx:supportsAutoXDC>
       <xilinx:definitionSource>module_ref</xilinx:definitionSource>
       <xilinx:designToolContexts>
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-03-26T17:34:09Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2020-03-30T14:35:53Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>

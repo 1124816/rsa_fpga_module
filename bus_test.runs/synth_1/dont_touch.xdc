@@ -3,6 +3,9 @@
 
 # XDC: /media/Second/workspace/Research/bus_test/zedboard_master_XDC_RevC_D_v3.xdc
 
+# IP: ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==blk_mem_gen_0 || ORIG_REF_NAME==blk_mem_gen_0} -quiet] -quiet
+
 # Block Designs: bd/design_1/design_1.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
 
@@ -21,7 +24,14 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_rst_ps
 # IP: bd/design_1/ip/design_1_top_0_0/design_1_top_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_top_0_0 || ORIG_REF_NAME==design_1_top_0_0} -quiet] -quiet
 
+# IP: ip/blk_mem_gen_0/blk_mem_gen_0.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==blk_mem_gen_0 || ORIG_REF_NAME==blk_mem_gen_0} -quiet] -quiet
+
 # IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
+
+# XDC: ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc
+
+# XDC: ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc
 
 # XDC: bd/design_1/design_1_ooc.xdc

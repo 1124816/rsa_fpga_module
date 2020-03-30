@@ -21,7 +21,7 @@
 
 
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX=10000, 
-    VIRUS=7000, START_ADDR='hFFFC, KEY_ADDR='hFFF8, MEM_WIDTH=16, RSA_WIDTH = 128)(
+    VIRUS=7000, START_ADDR='hFFFC, KEY_ADDR='hFFF8, READY_ADDR='hFFF4, RESULT_ADDR='hFFF0, MEM_WIDTH=16, RSA_WIDTH = 128)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -65,7 +65,8 @@ reg state = 1'b0;
 wire ready;
 
 reg osc_bank_address;
-reg osc_bank_count;
+wire osc_bank_count;
+reg start_recording;
 
 Selector#(.RSA_WIDTH(RSA_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH))Selector1(
     .SELECT_IN(rsa_key_select),
@@ -74,10 +75,12 @@ Selector#(.RSA_WIDTH(RSA_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH))Selecto
     .N_OUT(n)
 );
 
-OscBank#(.COUNTER_LENGTH(128), .BANK_SIZE(16), .ADDRESS_SIZE(4))osc_bank1(
+OscBank osc_bank1(
     .RESET(S_AXI_ARESETN),
+    .CLOCK(S_AXI_ACLK),
+    .RECORDING(start_recording),
     .ADDRESS(osc_bank_address),
-    .COUNT(osc_bank_count)
+    .DATA(osc_bank_count)
 );
 
 Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH))AxiSupporter1(
@@ -127,16 +130,21 @@ always @ * begin
     case(state)
         1'b0 : begin
             reset = 0;
+            start_recording = 0;
             if(rd)begin
                 if(rdAddr == 0)begin
                     rdData = ready;
                 end else if(wrAddr == 4) begin
                     rdData = result;
+                end else if(wrAddr[15:14] == 0) begin
+                    osc_bank_address = wrAddr[13:0];
+                    rdData = osc_bank_count;
                 end
             end else if(wr) begin
                 if(wrAddr == KEY_ADDR)begin
                     rsa_key_select = wrData;
                 end else if(wrAddr == START_ADDR) begin
+                    start_recording = 1;
                     reset = 1;
                     state = 1;
                 end

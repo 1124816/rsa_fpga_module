@@ -56,6 +56,7 @@
 
 int main() {
 	init_platform();
+
 	int32_t validRead;
 	int32_t value;
 	XTime * end, ts;
@@ -64,31 +65,24 @@ int main() {
 	int32_t * const peripheral = (int32_t*)0x43C00000;
 	int32_t * const peripheral_start = (int32_t*)0x43C0FFFC;
 	int32_t * const peripheral_key = (int32_t*)0x43C0FFF8;
+	int32_t * const peripheral_done = (int32_t*)0x43C0FFF4;
 	// How long to wait between streams of measurements in ns
 	const long delay = 100000000;
 	// How many times to read from the monitor
 	const int32_t numReads = 4;
-	//while(1) {
+
+	while(1) {
 		// First, write to the voltage monitor to begin a measurement
 		*peripheral_key = 2;
-        *peripheral_start = 0;
 
 		// Read from monitor
 		validRead = 0;
 		xil_printf("Starting read\n");
 
-        XTime_GetTime(end);
-        end += (delay * COUNTS_PER_SECOND) / 100;
-
-        XTime_GetTime(&ts);
-        while (*ts < end) {
-	    	xil_printf("Hello World\n\r");
 
 
-	        usleep(200000);			//delay
-            XTime_GetTime(&ts);
-        }
-
+	    usleep(200000);			//delay
+/*
         while(*peripheral == 0) {
             XTime_GetTime(end);
             end += (delay * COUNTS_PER_SECOND) / 1000000000;
@@ -98,21 +92,27 @@ int main() {
                 XTime_GetTime(&ts);
             }
         }
+       */
+        *peripheral_start = 0;
+
+        while(*peripheral_done == 0) {
+        	usleep(200000);
+        	xil_printf("Not done\n");
+        }
 
 		while(validRead < numReads) {
 			// Check a flag bit
 			int32_t *addr = peripheral + validRead;
 			value = *addr;
-			if ((value & (1<<31)) != 0) {
+			//if ((value & (1<<31)) != 0) {
 				value &= 0xFF;
-				validRead++;
 				xil_printf("%d\n", value);
-			}
+			//}
+			validRead++;
 		}
 		xil_printf("Ending read\n");
-
 		//xil_printf("\n%ld\n", ts);
-	//}
+	}
 	cleanup_platform();
 	return 0;
 }
