@@ -99,6 +99,9 @@ int main() {
         	usleep(200000);
         	xil_printf("Not done\n");
         }
+		value = *peripheral_done;
+		value &= 0xFF;
+		xil_printf("%d\n", value);
 
 		while(validRead < numReads) {
 			// Check a flag bit

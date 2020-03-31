@@ -64,8 +64,8 @@ reg reset;
 reg state = 1'b0;
 wire ready;
 
-reg osc_bank_address;
-wire osc_bank_count;
+reg [MEM_WIDTH-1:0] osc_bank_address;
+wire [MEM_WIDTH-1:0] osc_bank_count;
 reg start_recording;
 
 Selector#(.RSA_WIDTH(RSA_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH))Selector1(
@@ -132,9 +132,9 @@ always @ * begin
             reset = 0;
             start_recording = 0;
             if(rd)begin
-                if(rdAddr == 0)begin
+                if(rdAddr == READY_ADDR)begin
                     rdData = ready;
-                end else if(wrAddr == 4) begin
+                end else if(wrAddr == RESULT_ADDR) begin
                     rdData = result;
                 end else if(wrAddr[15:14] == 0) begin
                     osc_bank_address = wrAddr[13:0];
@@ -152,6 +152,7 @@ always @ * begin
         end
         1'b1 : begin
             reset = 0;
+            start_recording = 0;
             if(ready)begin
                 state = 0;
             end

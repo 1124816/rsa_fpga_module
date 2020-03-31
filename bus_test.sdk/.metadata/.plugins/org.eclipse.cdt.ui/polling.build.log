@@ -1,8 +1,8 @@
-08:31:53 **** Incremental Build of configuration Debug for project polling ****
+01:34:04 **** Incremental Build of configuration Debug for project polling ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
 
-08:31:53 Build Finished (took 637ms)
+01:34:04 Build Finished (took 427ms)
 

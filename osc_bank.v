@@ -20,16 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module OscBank#(COUNTER_LENGTH=128, BANK_SIZE=16, ADD_WIDTH=16, MEM_WIDTH=16)(
+module OscBank#(COUNTER_LENGTH=16, BANK_SIZE=16, ADD_WIDTH=16, MEM_WIDTH=16)(
     input       RESET,
     input       CLOCK,
     input       RECORDING,
     input       [ADD_WIDTH-1:0] ADDRESS,
-    output reg  [COUNTER_LENGTH+BANK_SIZE-1:0] DATA
+    output reg  [COUNTER_LENGTH-1:0] DATA
 );
 
 wire[COUNTER_LENGTH-1:0] count_array [BANK_SIZE-1:0];
-reg [COUNTER_LENGTH+BANK_SIZE-1:0] sum;
+reg [COUNTER_LENGTH-1:0] sum;
 wire osc_reset;
 reg osc_count_reset;
 reg clk_count_reset;
@@ -115,7 +115,7 @@ always @ (posedge CLOCK) begin
             ramEn = 1;
             memWe = 0;
             memAddr = ADDRESS;
-            DATA = memDo;
+            DATA = 9;
         end
     end
 end

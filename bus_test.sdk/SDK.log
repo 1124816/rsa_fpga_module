@@ -8120,3 +8120,326 @@ con
 08:32:51 INFO  : Successfully done setting SDK workspace  
 08:32:51 INFO  : Processing command line option -hwspec /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf.
 08:32:51 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+00:08:22 INFO  : Launching XSCT server: xsct -n -interactive /media/Second/workspace/Research/bus_test/bus_test.sdk/temp_xsdb_launch_script.tcl
+00:08:22 INFO  : Registering command handlers for SDK TCF services
+00:08:27 INFO  : XSCT server has started successfully.
+00:08:27 INFO  : Successfully done setting XSCT server connection channel  
+00:08:27 INFO  : Successfully done setting SDK workspace  
+00:08:27 INFO  : Processing command line option -hwspec /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf.
+00:08:28 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+00:08:34 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1585627520000,  Project:1585551142000
+00:08:34 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf.
+00:08:34 INFO  : Copied contents of /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+00:08:56 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+00:09:20 INFO  : 
+00:09:21 INFO  : 
+00:09:23 INFO  : Updating hardware inferred compiler options for hello_test.
+00:09:24 INFO  : Updating hardware inferred compiler options for polling.
+00:09:24 INFO  : Clearing existing target manager status.
+00:09:24 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+00:09:28 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+00:10:09 INFO  : Launching XSCT server: xsct -n -interactive /media/Second/workspace/Research/bus_test/bus_test.sdk/temp_xsdb_launch_script.tcl
+00:10:09 INFO  : Registering command handlers for SDK TCF services
+00:10:15 INFO  : XSCT server has started successfully.
+00:10:18 INFO  : Successfully done setting XSCT server connection channel  
+00:10:18 INFO  : Successfully done setting SDK workspace  
+00:10:18 INFO  : Processing command line option -hwspec /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf.
+00:10:18 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+00:11:28 INFO  : Launching XSCT server: xsct -n -interactive /media/Second/workspace/Research/bus_test/bus_test.sdk/temp_xsdb_launch_script.tcl
+00:11:28 INFO  : Registering command handlers for SDK TCF services
+00:11:33 INFO  : XSCT server has started successfully.
+00:11:33 INFO  : Successfully done setting XSCT server connection channel  
+00:11:34 INFO  : Successfully done setting SDK workspace  
+00:11:34 INFO  : Processing command line option -hwspec /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf.
+00:11:34 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+00:12:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:12:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39885" && level==0} -index 1' command is executed.
+00:12:56 INFO  : FPGA configured successfully with bitstream "/media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+00:14:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39885" && level==0} -index 1' command is executed.
+00:14:03 INFO  : 'fpga -state' command is executed.
+00:14:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:14:03 INFO  : Jtag cable 'Digilent Zed 210248A39885' is selected.
+00:14:03 INFO  : 'jtag frequency' command is executed.
+00:14:03 INFO  : Sourcing of '/media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+00:14:03 INFO  : Context for 'APU' is selected.
+00:14:03 INFO  : Hardware design information is loaded from '/media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+00:14:03 INFO  : 'configparams force-mem-access 1' command is executed.
+00:14:03 INFO  : Context for 'APU' is selected.
+00:14:04 INFO  : 'stop' command is executed.
+00:14:04 INFO  : 'ps7_init' command is executed.
+00:14:04 INFO  : 'ps7_post_config' command is executed.
+00:14:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:14:04 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+00:14:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:14:05 INFO  : The application '/media/Second/workspace/Research/bus_test/bus_test.sdk/polling/Debug/polling.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:14:05 INFO  : 'configparams force-mem-access 0' command is executed.
+00:14:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+loadhw -hw /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+dow /media/Second/workspace/Research/bus_test/bus_test.sdk/polling/Debug/polling.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:14:05 INFO  : Memory regions updated for context APU
+00:14:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:14:05 INFO  : 'con' command is executed.
+00:14:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+con
+----------------End of Script----------------
+
+00:14:05 INFO  : Launch script is exported to file '/media/Second/workspace/Research/bus_test/bus_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_polling.elf_on_local.tcl'
+00:41:44 INFO  : Disconnected from the channel tcfchan#1.
+00:41:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39885" && level==0} -index 1' command is executed.
+00:41:45 INFO  : 'fpga -state' command is executed.
+00:41:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:41:46 INFO  : Jtag cable 'Digilent Zed 210248A39885' is selected.
+00:41:46 INFO  : 'jtag frequency' command is executed.
+00:41:46 INFO  : Sourcing of '/media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+00:41:46 INFO  : Context for 'APU' is selected.
+00:41:48 INFO  : Hardware design information is loaded from '/media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+00:41:48 INFO  : 'configparams force-mem-access 1' command is executed.
+00:41:48 INFO  : Context for 'APU' is selected.
+00:41:48 INFO  : 'stop' command is executed.
+00:41:48 INFO  : 'ps7_init' command is executed.
+00:41:48 INFO  : 'ps7_post_config' command is executed.
+00:41:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:41:48 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+00:41:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:41:48 INFO  : The application '/media/Second/workspace/Research/bus_test/bus_test.sdk/polling/Debug/polling.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:41:48 INFO  : 'configparams force-mem-access 0' command is executed.
+00:41:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+loadhw -hw /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+dow /media/Second/workspace/Research/bus_test/bus_test.sdk/polling/Debug/polling.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:41:48 INFO  : Memory regions updated for context APU
+00:41:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:41:48 INFO  : 'con' command is executed.
+00:41:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+con
+----------------End of Script----------------
+
+00:41:48 INFO  : Launch script is exported to file '/media/Second/workspace/Research/bus_test/bus_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_polling.elf_on_local.tcl'
+00:42:14 INFO  : Disconnected from the channel tcfchan#2.
+00:57:54 INFO  : Launching XSCT server: xsct -n -interactive /media/Second/workspace/Research/bus_test/bus_test.sdk/temp_xsdb_launch_script.tcl
+00:57:54 INFO  : Registering command handlers for SDK TCF services
+00:58:00 INFO  : XSCT server has started successfully.
+00:58:12 INFO  : Successfully done setting XSCT server connection channel  
+00:58:12 INFO  : Successfully done setting SDK workspace  
+00:58:12 INFO  : Processing command line option -hwspec /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf.
+00:58:12 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+00:58:19 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1585630571000,  Project:1585627520000
+00:58:19 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf.
+00:58:19 INFO  : Copied contents of /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+00:58:23 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+00:58:29 INFO  : 
+00:58:30 INFO  : 
+00:58:31 INFO  : Updating hardware inferred compiler options for hello_test.
+00:58:31 INFO  : Updating hardware inferred compiler options for polling.
+00:58:31 INFO  : Clearing existing target manager status.
+00:58:31 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+00:58:34 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+01:01:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:01:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39885" && level==0} -index 1' command is executed.
+01:01:11 INFO  : FPGA configured successfully with bitstream "/media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+01:01:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39885" && level==0} -index 1' command is executed.
+01:01:29 INFO  : 'fpga -state' command is executed.
+01:01:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:01:29 INFO  : Jtag cable 'Digilent Zed 210248A39885' is selected.
+01:01:29 INFO  : 'jtag frequency' command is executed.
+01:01:29 INFO  : Sourcing of '/media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:01:29 INFO  : Context for 'APU' is selected.
+01:01:29 INFO  : Hardware design information is loaded from '/media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+01:01:29 INFO  : 'configparams force-mem-access 1' command is executed.
+01:01:29 INFO  : Context for 'APU' is selected.
+01:01:29 INFO  : 'stop' command is executed.
+01:01:29 INFO  : 'ps7_init' command is executed.
+01:01:29 INFO  : 'ps7_post_config' command is executed.
+01:01:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:01:29 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:01:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:01:29 INFO  : The application '/media/Second/workspace/Research/bus_test/bus_test.sdk/polling/Debug/polling.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:01:29 INFO  : 'configparams force-mem-access 0' command is executed.
+01:01:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+loadhw -hw /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+dow /media/Second/workspace/Research/bus_test/bus_test.sdk/polling/Debug/polling.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:01:30 INFO  : Memory regions updated for context APU
+01:01:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:01:30 INFO  : 'con' command is executed.
+01:01:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+con
+----------------End of Script----------------
+
+01:01:30 INFO  : Launch script is exported to file '/media/Second/workspace/Research/bus_test/bus_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_polling.elf_on_local.tcl'
+01:01:42 INFO  : Disconnected from the channel tcfchan#1.
+01:14:41 INFO  : Launching XSCT server: xsct -n -interactive /media/Second/workspace/Research/bus_test/bus_test.sdk/temp_xsdb_launch_script.tcl
+01:14:41 INFO  : Registering command handlers for SDK TCF services
+01:14:47 INFO  : XSCT server has started successfully.
+01:14:58 INFO  : Successfully done setting XSCT server connection channel  
+01:14:58 INFO  : Processing command line option -hwspec /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf.
+01:15:09 INFO  : Successfully done setting SDK workspace  
+01:15:09 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+01:15:09 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1585631577000,  Project:1585630571000
+01:15:09 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf.
+01:15:09 INFO  : Copied contents of /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+01:15:13 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+01:15:18 INFO  : 
+01:15:19 INFO  : 
+01:15:20 INFO  : Updating hardware inferred compiler options for hello_test.
+01:15:21 INFO  : Updating hardware inferred compiler options for polling.
+01:15:21 INFO  : Clearing existing target manager status.
+01:15:21 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+01:15:24 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+01:15:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:15:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39885" && level==0} -index 1' command is executed.
+01:15:26 INFO  : FPGA configured successfully with bitstream "/media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+01:16:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39885" && level==0} -index 1' command is executed.
+01:16:07 INFO  : 'fpga -state' command is executed.
+01:16:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:16:07 INFO  : Jtag cable 'Digilent Zed 210248A39885' is selected.
+01:16:08 INFO  : 'jtag frequency' command is executed.
+01:16:08 INFO  : Sourcing of '/media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:16:08 INFO  : Context for 'APU' is selected.
+01:16:08 INFO  : Hardware design information is loaded from '/media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+01:16:08 INFO  : 'configparams force-mem-access 1' command is executed.
+01:16:08 INFO  : Context for 'APU' is selected.
+01:16:08 INFO  : 'stop' command is executed.
+01:16:08 INFO  : 'ps7_init' command is executed.
+01:16:08 INFO  : 'ps7_post_config' command is executed.
+01:16:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:16:08 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:16:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:16:08 INFO  : The application '/media/Second/workspace/Research/bus_test/bus_test.sdk/polling/Debug/polling.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:16:08 INFO  : 'configparams force-mem-access 0' command is executed.
+01:16:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+loadhw -hw /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+dow /media/Second/workspace/Research/bus_test/bus_test.sdk/polling/Debug/polling.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:16:08 INFO  : Memory regions updated for context APU
+01:16:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:16:08 INFO  : 'con' command is executed.
+01:16:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+con
+----------------End of Script----------------
+
+01:16:08 INFO  : Launch script is exported to file '/media/Second/workspace/Research/bus_test/bus_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_polling.elf_on_local.tcl'
+01:22:05 INFO  : Disconnected from the channel tcfchan#1.
+01:31:17 INFO  : Launching XSCT server: xsct -n -interactive /media/Second/workspace/Research/bus_test/bus_test.sdk/temp_xsdb_launch_script.tcl
+01:31:18 INFO  : Registering command handlers for SDK TCF services
+01:31:22 INFO  : XSCT server has started successfully.
+01:31:22 INFO  : Successfully done setting XSCT server connection channel  
+01:31:39 INFO  : Successfully done setting SDK workspace  
+01:31:39 INFO  : Processing command line option -hwspec /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf.
+01:31:46 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+01:31:46 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1585632597000,  Project:1585631577000
+01:31:46 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf.
+01:31:46 INFO  : Copied contents of /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+01:31:50 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+01:31:55 INFO  : 
+01:31:56 INFO  : 
+01:31:57 INFO  : Updating hardware inferred compiler options for hello_test.
+01:31:58 INFO  : Updating hardware inferred compiler options for polling.
+01:31:58 INFO  : Clearing existing target manager status.
+01:31:58 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+01:32:01 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+01:32:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:32:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39885" && level==0} -index 1' command is executed.
+01:32:04 INFO  : FPGA configured successfully with bitstream "/media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+01:34:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39885" && level==0} -index 1' command is executed.
+01:34:06 INFO  : 'fpga -state' command is executed.
+01:34:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:34:06 INFO  : Jtag cable 'Digilent Zed 210248A39885' is selected.
+01:34:06 INFO  : 'jtag frequency' command is executed.
+01:34:06 INFO  : Sourcing of '/media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:34:06 INFO  : Context for 'APU' is selected.
+01:34:06 INFO  : Hardware design information is loaded from '/media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+01:34:06 INFO  : 'configparams force-mem-access 1' command is executed.
+01:34:06 INFO  : Context for 'APU' is selected.
+01:34:06 INFO  : 'stop' command is executed.
+01:34:07 INFO  : 'ps7_init' command is executed.
+01:34:07 INFO  : 'ps7_post_config' command is executed.
+01:34:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:34:07 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:34:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:34:07 INFO  : The application '/media/Second/workspace/Research/bus_test/bus_test.sdk/polling/Debug/polling.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:34:07 INFO  : 'configparams force-mem-access 0' command is executed.
+01:34:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+loadhw -hw /media/Second/workspace/Research/bus_test/bus_test.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+dow /media/Second/workspace/Research/bus_test/bus_test.sdk/polling/Debug/polling.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:34:07 INFO  : Memory regions updated for context APU
+01:34:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:34:07 INFO  : 'con' command is executed.
+01:34:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39885"} -index 0
+con
+----------------End of Script----------------
+
+01:34:07 INFO  : Launch script is exported to file '/media/Second/workspace/Research/bus_test/bus_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_polling.elf_on_local.tcl'
+01:35:17 INFO  : Disconnected from the channel tcfchan#1.

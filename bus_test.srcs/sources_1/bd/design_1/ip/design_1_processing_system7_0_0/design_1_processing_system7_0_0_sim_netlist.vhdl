@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Fri Feb 21 02:48:24 2020
+-- Date        : Fri Feb 21 12:34:57 2020
 -- Host        : manjaro running 64-bit Manjaro Linux
 -- Command     : write_vhdl -force -mode funcsim -rename_top design_1_processing_system7_0_0 -prefix
 --               design_1_processing_system7_0_0_ design_1_processing_system7_0_0_sim_netlist.vhdl
