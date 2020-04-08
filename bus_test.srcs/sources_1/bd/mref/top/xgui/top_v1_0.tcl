@@ -3,6 +3,7 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
+  ipgui::add_param $IPINST -name "ADD_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S_AXI_ADDR_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S_AXI_DATA_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "DELAY" -parent ${Page_0}
@@ -17,6 +18,15 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "VIRUS" -parent ${Page_0}
 
 
+}
+
+proc update_PARAM_VALUE.ADD_WIDTH { PARAM_VALUE.ADD_WIDTH } {
+	# Procedure called to update ADD_WIDTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.ADD_WIDTH { PARAM_VALUE.ADD_WIDTH } {
+	# Procedure called to validate ADD_WIDTH
+	return true
 }
 
 proc update_PARAM_VALUE.C_S_AXI_ADDR_WIDTH { PARAM_VALUE.C_S_AXI_ADDR_WIDTH } {
@@ -178,13 +188,18 @@ proc update_MODELPARAM_VALUE.RESULT_ADDR { MODELPARAM_VALUE.RESULT_ADDR PARAM_VA
 	set_property value [get_property value ${PARAM_VALUE.RESULT_ADDR}] ${MODELPARAM_VALUE.RESULT_ADDR}
 }
 
-proc update_MODELPARAM_VALUE.MEM_WIDTH { MODELPARAM_VALUE.MEM_WIDTH PARAM_VALUE.MEM_WIDTH } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.MEM_WIDTH}] ${MODELPARAM_VALUE.MEM_WIDTH}
-}
-
 proc update_MODELPARAM_VALUE.RSA_WIDTH { MODELPARAM_VALUE.RSA_WIDTH PARAM_VALUE.RSA_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.RSA_WIDTH}] ${MODELPARAM_VALUE.RSA_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.ADD_WIDTH { MODELPARAM_VALUE.ADD_WIDTH PARAM_VALUE.ADD_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.ADD_WIDTH}] ${MODELPARAM_VALUE.ADD_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.MEM_WIDTH { MODELPARAM_VALUE.MEM_WIDTH PARAM_VALUE.MEM_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.MEM_WIDTH}] ${MODELPARAM_VALUE.MEM_WIDTH}
 }
 

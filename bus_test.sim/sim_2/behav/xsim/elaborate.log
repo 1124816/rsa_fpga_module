@@ -1,0 +1,38 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /media/Second/tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto 8ccdfced234a47e6b4345a173f1840b0 --incr --debug typical --relax --mt 8 -L blk_mem_gen_v8_4_3 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_behav xil_defaultlib.top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 1 for port 'M_OUT' [/media/Second/workspace/Research/bus_test/top.v:84]
+WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 1 for port 'E_OUT' [/media/Second/workspace/Research/bus_test/top.v:85]
+WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 1 for port 'N_OUT' [/media/Second/workspace/Research/bus_test/top.v:86]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 128 for port 'COUNT' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 128 for port 'COUNT' [/media/Second/workspace/Research/bus_test/top.v:139]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/media/Second/workspace/Research/bus_test/rsa.v" Line 1. Module exponentiate doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/media/Second/workspace/Research/bus_test/rsa.v" Line 86. Module modularMultiplication doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/media/Second/workspace/Research/bus_test/rsa.v" Line 86. Module modularMultiplication doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Selector
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module xil_defaultlib.osc
+Compiling module xil_defaultlib.osc_counter
+Compiling module xil_defaultlib.OscBank_default
+Compiling module xil_defaultlib.Axi4LiteSupporter(C_S_AXI_ADDR_W...
+Compiling module xil_defaultlib.modularMultiplication
+Compiling module xil_defaultlib.exponentiate
+Compiling module xil_defaultlib.clock_counter
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_output_stage(...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_output_stage(...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3(C_FAMILY="zyn...
+Compiling module xil_defaultlib.blk_mem_gen_0
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_behav

@@ -1,0 +1,10 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /media/Second/tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto 8ccdfced234a47e6b4345a173f1840b0 --incr --debug typical --relax --mt 8 -L blk_mem_gen_v8_4_3 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot design_1_wrapper_behav xil_defaultlib.design_1_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2063] Module <design_1_Axi4LiteSupporter_0_0> not found while processing module instance <Axi4LiteSupporter_0> [/media/Second/workspace/Research/bus_test/bus_test.ip_user_files/bd/design_1/sim/design_1.v:156]
+ERROR: [VRFC 10-2063] Module <design_1_ila_0_0> not found while processing module instance <ila_0> [/media/Second/workspace/Research/bus_test/bus_test.ip_user_files/bd/design_1/sim/design_1.v:177]
+ERROR: [VRFC 10-2063] Module <design_1_xbar_0> not found while processing module instance <xbar> [/media/Second/workspace/Research/bus_test/bus_test.ip_user_files/bd/design_1/sim/design_1.v:892]
+ERROR: [VRFC 10-2063] Module <design_1_rst_ps7_0_100M_0> not found while processing module instance <rst_ps7_0_100M> [/media/Second/workspace/Research/bus_test/bus_test.ip_user_files/bd/design_1/sim/design_1.v:345]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

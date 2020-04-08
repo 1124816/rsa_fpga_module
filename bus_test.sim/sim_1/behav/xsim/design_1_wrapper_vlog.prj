@@ -1,0 +1,28 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../bus_test.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../bus_test.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" --include "/media/Second/tools/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
+"../../../../bus_test.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../../axi4litesupporter.v" \
+"../../../../clk_wrapper.v" \
+"../../../../osc.v" \
+"../../../../osc_bank.v" \
+"../../../../osc_wrapper.v" \
+"../../../../selector.v" \
+
+sv xil_defaultlib  --include "../../../../bus_test.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../bus_test.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" --include "/media/Second/tools/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
+"../../../../rsa.v" \
+
+verilog xil_defaultlib  --include "../../../../bus_test.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../bus_test.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" --include "/media/Second/tools/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
+"../../../../top.v" \
+"../../../../bus_test.ip_user_files/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_sim_netlist.v" \
+"../../../../bus_test.ip_user_files/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_sim_netlist.v" \
+"../../../../bus_test.ip_user_files/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1_sim_netlist.v" \
+"../../../../bus_test.ip_user_files/bd/design_1/ip/design_1_top_0_0/sim/design_1_top_0_0.v" \
+"../../../../bus_test.ip_user_files/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.v" \
+"../../../../bus_test.ip_user_files/bd/design_1/sim/design_1.v" \
+"../../../../bus_test.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

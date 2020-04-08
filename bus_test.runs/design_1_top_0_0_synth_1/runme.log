@@ -17,7 +17,7 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 74594 
+INFO: Helper process launched with PID 141094 
 WARNING: [Synth 8-2507] parameter declaration becomes local in Axi4LiteSupporter with formal parameter declaration list [/media/Second/workspace/Research/bus_test/axi4litesupporter.v:36]
 WARNING: [Synth 8-2611] redeclaration of ansi port M_OUT is not allowed [/media/Second/workspace/Research/bus_test/selector.v:31]
 WARNING: [Synth 8-1082] M_OUT was previously declared with a range [/media/Second/workspace/Research/bus_test/selector.v:31]
@@ -26,7 +26,7 @@ WARNING: [Synth 8-1082] E_OUT was previously declared with a range [/media/Secon
 WARNING: [Synth 8-2611] redeclaration of ansi port N_OUT is not allowed [/media/Second/workspace/Research/bus_test/selector.v:33]
 WARNING: [Synth 8-1082] N_OUT was previously declared with a range [/media/Second/workspace/Research/bus_test/selector.v:33]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1800.820 ; gain = 158.656 ; free physical = 150 ; free virtual = 10856
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 1801.406 ; gain = 159.656 ; free physical = 647 ; free virtual = 11999
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_top_0_0' [/media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/synth/design_1_top_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'top' [/media/Second/workspace/Research/bus_test/top.v:23]
@@ -40,20 +40,19 @@ INFO: [Synth 8-6157] synthesizing module 'top' [/media/Second/workspace/Research
 	Parameter KEY_ADDR bound to: 65528 - type: integer 
 	Parameter READY_ADDR bound to: 65524 - type: integer 
 	Parameter RESULT_ADDR bound to: 65520 - type: integer 
-	Parameter MEM_WIDTH bound to: 16 - type: integer 
 	Parameter RSA_WIDTH bound to: 128 - type: integer 
+	Parameter ADD_WIDTH bound to: 16 - type: integer 
+	Parameter MEM_WIDTH bound to: 16 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'Selector' [/media/Second/workspace/Research/bus_test/selector.v:23]
 	Parameter RSA_WIDTH bound to: 128 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'Selector' (1#1) [/media/Second/workspace/Research/bus_test/selector.v:23]
-WARNING: [Synth 8-689] width (128) of port connection 'M_OUT' does not match port width (1) of module 'Selector' [/media/Second/workspace/Research/bus_test/top.v:73]
-WARNING: [Synth 8-689] width (128) of port connection 'E_OUT' does not match port width (1) of module 'Selector' [/media/Second/workspace/Research/bus_test/top.v:74]
-WARNING: [Synth 8-689] width (128) of port connection 'N_OUT' does not match port width (1) of module 'Selector' [/media/Second/workspace/Research/bus_test/top.v:75]
+WARNING: [Synth 8-689] width (128) of port connection 'M_OUT' does not match port width (1) of module 'Selector' [/media/Second/workspace/Research/bus_test/top.v:84]
+WARNING: [Synth 8-689] width (128) of port connection 'E_OUT' does not match port width (1) of module 'Selector' [/media/Second/workspace/Research/bus_test/top.v:85]
+WARNING: [Synth 8-689] width (128) of port connection 'N_OUT' does not match port width (1) of module 'Selector' [/media/Second/workspace/Research/bus_test/top.v:86]
 INFO: [Synth 8-6157] synthesizing module 'OscBank' [/media/Second/workspace/Research/bus_test/osc_bank.v:23]
 	Parameter COUNTER_LENGTH bound to: 16 - type: integer 
 	Parameter BANK_SIZE bound to: 16 - type: integer 
-	Parameter ADD_WIDTH bound to: 16 - type: integer 
-	Parameter MEM_WIDTH bound to: 16 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_wrapper.v:23]
 	Parameter COUNTER_LENGTH bound to: 128 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'osc' [/media/Second/workspace/Research/bus_test/osc.v:23]
@@ -65,26 +64,40 @@ INFO: [Synth 8-6157] synthesizing module 'LUT1' [/media/Second/tools/Xilinx/Viva
 INFO: [Synth 8-6155] done synthesizing module 'LUT1' (3#1) [/media/Second/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39008]
 INFO: [Synth 8-6155] done synthesizing module 'osc' (4#1) [/media/Second/workspace/Research/bus_test/osc.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'osc_counter' (5#1) [/media/Second/workspace/Research/bus_test/osc_wrapper.v:23]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
-WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:62]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+WARNING: [Synth 8-689] width (16) of port connection 'COUNT' does not match port width (128) of module 'osc_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'OscBank' (6#1) [/media/Second/workspace/Research/bus_test/osc_bank.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Axi4LiteSupporter' [/media/Second/workspace/Research/bus_test/axi4litesupporter.v:3]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter RD1 bound to: 1 - type: integer 
+	Parameter WR1 bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Axi4LiteSupporter' (7#1) [/media/Second/workspace/Research/bus_test/axi4litesupporter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'exponentiate' [/media/Second/workspace/Research/bus_test/rsa.v:1]
+	Parameter RSA_WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'modularMultiplication' [/media/Second/workspace/Research/bus_test/rsa.v:86]
+	Parameter RSA_WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'modularMultiplication' (8#1) [/media/Second/workspace/Research/bus_test/rsa.v:86]
+INFO: [Synth 8-6155] done synthesizing module 'exponentiate' (9#1) [/media/Second/workspace/Research/bus_test/rsa.v:1]
 INFO: [Synth 8-6157] synthesizing module 'clock_counter' [/media/Second/workspace/Research/bus_test/clk_wrapper.v:23]
 	Parameter COUNTER_LENGTH bound to: 128 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (6#1) [/media/Second/workspace/Research/bus_test/clk_wrapper.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'COUNT' does not match port width (128) of module 'clock_counter' [/media/Second/workspace/Research/bus_test/osc_bank.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'clock_counter' (10#1) [/media/Second/workspace/Research/bus_test/clk_wrapper.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'COUNT' does not match port width (128) of module 'clock_counter' [/media/Second/workspace/Research/bus_test/top.v:139]
 INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [/media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:70]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
@@ -162,32 +175,12 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [/media/Second/workspace
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     18.81095 mW - type: string 
 INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at '/media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/ip/blk_mem_gen_0/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [/media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:236]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (17#1) [/media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:70]
-WARNING: [Synth 8-6014] Unused sequential element sum_reg was removed.  [/media/Second/workspace/Research/bus_test/osc_bank.v:84]
-WARNING: [Synth 8-3848] Net memDi in module/entity OscBank does not have driver. [/media/Second/workspace/Research/bus_test/osc_bank.v:44]
-INFO: [Synth 8-6155] done synthesizing module 'OscBank' (18#1) [/media/Second/workspace/Research/bus_test/osc_bank.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Axi4LiteSupporter' [/media/Second/workspace/Research/bus_test/axi4litesupporter.v:3]
-	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
-	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter IDLE bound to: 0 - type: integer 
-	Parameter RD1 bound to: 1 - type: integer 
-	Parameter WR1 bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Axi4LiteSupporter' (19#1) [/media/Second/workspace/Research/bus_test/axi4litesupporter.v:3]
-INFO: [Synth 8-6157] synthesizing module 'exponentiate' [/media/Second/workspace/Research/bus_test/rsa.v:1]
-	Parameter RSA_WIDTH bound to: 128 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'modularMultiplication' [/media/Second/workspace/Research/bus_test/rsa.v:86]
-	Parameter RSA_WIDTH bound to: 128 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'modularMultiplication' (20#1) [/media/Second/workspace/Research/bus_test/rsa.v:86]
-INFO: [Synth 8-6155] done synthesizing module 'exponentiate' (21#1) [/media/Second/workspace/Research/bus_test/rsa.v:1]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (21#1) [/media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:70]
 WARNING: [Synth 8-3848] Net result in module/entity top does not have driver. [/media/Second/workspace/Research/bus_test/top.v:56]
+WARNING: [Synth 8-3848] Net CLOCK in module/entity top does not have driver. [/media/Second/workspace/Research/bus_test/top.v:137]
+WARNING: [Synth 8-3848] Net memDi in module/entity top does not have driver. [/media/Second/workspace/Research/bus_test/top.v:77]
 INFO: [Synth 8-6155] done synthesizing module 'top' (22#1) [/media/Second/workspace/Research/bus_test/top.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_top_0_0' (23#1) [/media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/synth/design_1_top_0_0.v:58]
-WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[3]
-WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[2]
-WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[1]
-WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[0]
-WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WVALID
-WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_BREADY
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MUX_RST[0]
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MEM_LAT_RST
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MEM_REG_RST
@@ -282,9 +275,15 @@ WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected p
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[186]
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[185]
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[184]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[183]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[182]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[181]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[180]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[179]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[178]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:33 ; elapsed = 00:01:48 . Memory (MB): peak = 2005.625 ; gain = 363.461 ; free physical = 907 ; free virtual = 11528
+Finished RTL Elaboration : Time (s): cpu = 00:01:39 ; elapsed = 00:01:55 . Memory (MB): peak = 2011.516 ; gain = 369.766 ; free physical = 615 ; free virtual = 11991
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -297,10 +296,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:33 ; elapsed = 00:01:48 . Memory (MB): peak = 2023.438 ; gain = 381.273 ; free physical = 914 ; free virtual = 11535
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:40 ; elapsed = 00:01:56 . Memory (MB): peak = 2029.328 ; gain = 387.578 ; free physical = 627 ; free virtual = 12003
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:33 ; elapsed = 00:01:48 . Memory (MB): peak = 2023.438 ; gain = 381.273 ; free physical = 914 ; free virtual = 11535
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:40 ; elapsed = 00:01:56 . Memory (MB): peak = 2029.328 ; gain = 387.578 ; free physical = 627 ; free virtual = 12003
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -314,30 +313,29 @@ Parsing XDC File [/media/Second/workspace/Research/bus_test/bus_test.runs/design
 Finished Parsing XDC File [/media/Second/workspace/Research/bus_test/bus_test.runs/design_1_top_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2177.188 ; gain = 0.000 ; free physical = 792 ; free virtual = 11432
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2175.078 ; gain = 0.000 ; free physical = 600 ; free virtual = 11932
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2177.188 ; gain = 0.000 ; free physical = 789 ; free virtual = 11430
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2175.078 ; gain = 0.000 ; free physical = 594 ; free virtual = 11926
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:41 ; elapsed = 00:01:58 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 884 ; free virtual = 11525
+Finished Constraint Validation : Time (s): cpu = 00:01:49 ; elapsed = 00:02:07 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 606 ; free virtual = 11982
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:41 ; elapsed = 00:01:58 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 884 ; free virtual = 11525
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:49 ; elapsed = 00:02:07 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 602 ; free virtual = 11978
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for inst. (constraint file  /media/Second/workspace/Research/bus_test/bus_test.runs/design_1_top_0_0_synth_1/dont_touch.xdc, line 14).
-Applied set_property DONT_TOUCH = true for inst/osc_bank1/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:41 ; elapsed = 00:01:58 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 884 ; free virtual = 11525
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:49 ; elapsed = 00:02:07 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 602 ; free virtual = 11977
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'clk_count_reset_reg' into 'osc_count_reset_reg' [/media/Second/workspace/Research/bus_test/osc_bank.v:51]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Axi4LiteSupporter'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -348,12 +346,11 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Axi4L
 *
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Axi4LiteSupporter'
-WARNING: [Synth 8-327] inferring latch for variable 'rdData_reg' [/media/Second/workspace/Research/bus_test/top.v:92]
-WARNING: [Synth 8-327] inferring latch for variable 'state_reg' [/media/Second/workspace/Research/bus_test/top.v:130]
-WARNING: [Synth 8-327] inferring latch for variable 'osc_bank_address_reg' [/media/Second/workspace/Research/bus_test/top.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'rsa_key_select_reg' [/media/Second/workspace/Research/bus_test/top.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'state_reg' [/media/Second/workspace/Research/bus_test/top.v:155]
+WARNING: [Synth 8-327] inferring latch for variable 'rsa_key_select_reg' [/media/Second/workspace/Research/bus_test/top.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'memAddr_reg' [/media/Second/workspace/Research/bus_test/top.v:143]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:42 ; elapsed = 00:02:00 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 876 ; free virtual = 11518
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:51 ; elapsed = 00:02:09 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 580 ; free virtual = 11973
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -368,26 +365,27 @@ Detailed RTL Component Info :
 +---Adders : 
 	   3 Input    128 Bit       Adders := 8     
 	   2 Input    128 Bit       Adders := 6     
+	  17 Input     16 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 2     
 +---Registers : 
 	              128 Bit    Registers := 27    
 	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 3     
+	               16 Bit    Registers := 2     
 	                9 Bit    Registers := 2     
 	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 14    
+	                1 Bit    Registers := 11    
 +---Muxes : 
 	   2 Input    128 Bit        Muxes := 24    
 	   3 Input     32 Bit        Muxes := 2     
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 1     
 	   3 Input     16 Bit        Muxes := 2     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 65    
+	   2 Input      1 Bit        Muxes := 55    
 	   3 Input      1 Bit        Muxes := 11    
+	   6 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -395,31 +393,13 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module bindec 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 16    
-Module blk_mem_gen_mux 
-Detailed RTL Component Info : 
-+---Registers : 
-	               16 Bit    Registers := 1     
-	                4 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_mux__parameterized0 
-Detailed RTL Component Info : 
-+---Registers : 
-	                4 Bit    Registers := 1     
 Module OscBank 
 Detailed RTL Component Info : 
++---Adders : 
+	  17 Input     16 Bit       Adders := 1     
 +---Registers : 
-	               16 Bit    Registers := 2     
-	                1 Bit    Registers := 4     
-+---Muxes : 
-	   2 Input     16 Bit        Muxes := 2     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 Module Axi4LiteSupporter 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -454,12 +434,29 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input    128 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 7     
+Module bindec 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 16    
+Module blk_mem_gen_mux 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module blk_mem_gen_mux__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
 Module top 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 12    
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
 	   3 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -479,37 +476,8 @@ Warning: Parallel synthesis criteria is not met
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (modularMultiplication:/\twoN_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (modularMultiplication:/\twoR_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[126] )
-INFO: [Synth 8-3886] merging instance 'inst/osc_bank1/DATA_reg[0]' (FDRE) to 'inst/osc_bank1/DATA_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst/osc_bank1/DATA_reg[1]' (FDRE) to 'inst/osc_bank1/DATA_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/osc_bank1/DATA_reg[2]' (FDRE) to 'inst/osc_bank1/DATA_reg[4]'
-INFO: [Synth 8-3886] merging instance 'inst/osc_bank1/DATA_reg[4]' (FDRE) to 'inst/osc_bank1/DATA_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/osc_bank1/DATA_reg[5]' (FDRE) to 'inst/osc_bank1/DATA_reg[6]'
-INFO: [Synth 8-3886] merging instance 'inst/osc_bank1/DATA_reg[6]' (FDRE) to 'inst/osc_bank1/DATA_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/osc_bank1/DATA_reg[7]' (FDRE) to 'inst/osc_bank1/DATA_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/osc_bank1/DATA_reg[8]' (FDRE) to 'inst/osc_bank1/DATA_reg[9]'
-INFO: [Synth 8-3886] merging instance 'inst/osc_bank1/DATA_reg[9]' (FDRE) to 'inst/osc_bank1/DATA_reg[10]'
-INFO: [Synth 8-3886] merging instance 'inst/osc_bank1/DATA_reg[10]' (FDRE) to 'inst/osc_bank1/DATA_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/osc_bank1/DATA_reg[11]' (FDRE) to 'inst/osc_bank1/DATA_reg[12]'
-INFO: [Synth 8-3886] merging instance 'inst/osc_bank1/DATA_reg[12]' (FDRE) to 'inst/osc_bank1/DATA_reg[13]'
-INFO: [Synth 8-3886] merging instance 'inst/osc_bank1/DATA_reg[13]' (FDRE) to 'inst/osc_bank1/DATA_reg[14]'
-INFO: [Synth 8-3886] merging instance 'inst/osc_bank1/DATA_reg[14]' (FDRE) to 'inst/osc_bank1/DATA_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\osc_bank1/DATA_reg[15] )
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[16]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[17]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[18]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[19]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[20]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[21]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[22]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[23]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[24]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[25]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[26]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[27]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[28]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[29]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[30]' (LD) to 'inst/rdData_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rdData_reg[31] )
+INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[14]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[15]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[16]'
 INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[16]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[17]'
 INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[17]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[18]'
 INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[18]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[19]'
@@ -525,38 +493,9 @@ INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[27]' (FDE)
 INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[28]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[29]'
 INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[29]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[30]'
 INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[30]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\AxiSupporter1/rdDataQ_reg[31] )
 INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[126]' (FDE) to 'inst/rsa_math/exp_reg[125]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[125] )
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[31]' (LD) to 'inst/rdData_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[1]' (LD) to 'inst/rdData_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[2]' (LD) to 'inst/rdData_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[4]' (LD) to 'inst/rdData_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[5]' (LD) to 'inst/rdData_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[6]' (LD) to 'inst/rdData_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[7]' (LD) to 'inst/rdData_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[8]' (LD) to 'inst/rdData_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[9]' (LD) to 'inst/rdData_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[10]' (LD) to 'inst/rdData_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[11]' (LD) to 'inst/rdData_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[12]' (LD) to 'inst/rdData_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[13]' (LD) to 'inst/rdData_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/rdData_reg[14]' (LD) to 'inst/rdData_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rdData_reg[15] )
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[1]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[2]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[4]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[4]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[5]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[6]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[6]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[7]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[8]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[9]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[9]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[10]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[10]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[11]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[12]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[12]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[13]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[13]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[14]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[14]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[15]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\AxiSupporter1/rdDataQ_reg[31] )
 INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[125]' (FDE) to 'inst/rsa_math/exp_reg[124]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[124] )
 INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[124]' (FDE) to 'inst/rsa_math/exp_reg[123]'
@@ -610,62 +549,117 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa
 INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[100]' (FDE) to 'inst/rsa_math/exp_reg[99]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[99] )
 INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[99]' (FDE) to 'inst/rsa_math/exp_reg[98]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[98] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[98]' (FDE) to 'inst/rsa_math/exp_reg[97]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[97] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[97]' (FDE) to 'inst/rsa_math/exp_reg[96]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[96] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[96]' (FDE) to 'inst/rsa_math/exp_reg[95]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[95] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[95]' (FDE) to 'inst/rsa_math/exp_reg[94]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[94] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[94]' (FDE) to 'inst/rsa_math/exp_reg[93]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[93] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[93]' (FDE) to 'inst/rsa_math/exp_reg[92]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[92] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[92]' (FDE) to 'inst/rsa_math/exp_reg[91]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[91] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[91]' (FDE) to 'inst/rsa_math/exp_reg[90]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[90] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[90]' (FDE) to 'inst/rsa_math/exp_reg[89]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[89] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[89]' (FDE) to 'inst/rsa_math/exp_reg[88]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[88] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[88]' (FDE) to 'inst/rsa_math/exp_reg[87]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[87] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[87]' (FDE) to 'inst/rsa_math/exp_reg[86]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[86] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[86]' (FDE) to 'inst/rsa_math/exp_reg[85]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[85] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[85]' (FDE) to 'inst/rsa_math/exp_reg[84]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[84] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[84]' (FDE) to 'inst/rsa_math/exp_reg[83]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[83] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[83]' (FDE) to 'inst/rsa_math/exp_reg[82]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[82] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[82]' (FDE) to 'inst/rsa_math/exp_reg[81]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[81] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[81]' (FDE) to 'inst/rsa_math/exp_reg[80]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[80] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[80]' (FDE) to 'inst/rsa_math/exp_reg[79]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[79] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[79]' (FDE) to 'inst/rsa_math/exp_reg[78]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[78] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[78]' (FDE) to 'inst/rsa_math/exp_reg[77]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[77] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[77]' (FDE) to 'inst/rsa_math/exp_reg[76]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[76] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[76]' (FDE) to 'inst/rsa_math/exp_reg[75]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[75] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[75]' (FDE) to 'inst/rsa_math/exp_reg[74]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[74] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[74]' (FDE) to 'inst/rsa_math/exp_reg[73]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[73] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[73]' (FDE) to 'inst/rsa_math/exp_reg[72]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[72] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[72]' (FDE) to 'inst/rsa_math/exp_reg[71]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[71] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[71]' (FDE) to 'inst/rsa_math/exp_reg[70]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[70] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[70]' (FDE) to 'inst/rsa_math/exp_reg[69]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[69] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[69]' (FDE) to 'inst/rsa_math/exp_reg[68]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[68] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[68]' (FDE) to 'inst/rsa_math/exp_reg[67]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[67] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[67]' (FDE) to 'inst/rsa_math/exp_reg[66]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[66] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[66]' (FDE) to 'inst/rsa_math/exp_reg[65]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[65] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[65]' (FDE) to 'inst/rsa_math/exp_reg[64]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[64] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[64]' (FDE) to 'inst/rsa_math/exp_reg[63]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[63] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[63]' (FDE) to 'inst/rsa_math/exp_reg[62]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[62] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[62]' (FDE) to 'inst/rsa_math/exp_reg[61]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[61] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[61]' (FDE) to 'inst/rsa_math/exp_reg[60]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[60] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[60]' (FDE) to 'inst/rsa_math/exp_reg[59]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[59] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[59]' (FDE) to 'inst/rsa_math/exp_reg[58]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[58] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[58]' (FDE) to 'inst/rsa_math/exp_reg[57]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[57] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[57]' (FDE) to 'inst/rsa_math/exp_reg[56]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[56] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[56]' (FDE) to 'inst/rsa_math/exp_reg[55]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[55] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[55]' (FDE) to 'inst/rsa_math/exp_reg[54]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[54] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[54]' (FDE) to 'inst/rsa_math/exp_reg[53]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[53] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[53]' (FDE) to 'inst/rsa_math/exp_reg[52]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[52] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[52]' (FDE) to 'inst/rsa_math/exp_reg[51]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[51] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[51]' (FDE) to 'inst/rsa_math/exp_reg[50]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[50] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[50]' (FDE) to 'inst/rsa_math/exp_reg[49]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[49] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[49]' (FDE) to 'inst/rsa_math/exp_reg[48]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[48] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[48]' (FDE) to 'inst/rsa_math/exp_reg[47]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[47] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[47]' (FDE) to 'inst/rsa_math/exp_reg[46]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[46] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[46]' (FDE) to 'inst/rsa_math/exp_reg[45]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[45] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[45]' (FDE) to 'inst/rsa_math/exp_reg[44]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[44] )
+INFO: [Synth 8-3886] merging instance 'inst/rsa_math/exp_reg[44]' (FDE) to 'inst/rsa_math/exp_reg[43]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[43] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[42] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[41] )
@@ -677,8 +671,10 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[35] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[34] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\rsa_math/exp_reg[30] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-3332] Sequential element (rdData_reg[15]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (rsa_key_select_reg[31]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (rsa_key_select_reg[30]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (rsa_key_select_reg[29]) is unused and will be removed from module top.
@@ -712,7 +708,7 @@ WARNING: [Synth 8-3332] Sequential element (rsa_key_select_reg[2]) is unused and
 WARNING: [Synth 8-3332] Sequential element (rsa_key_select_reg[1]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (rsa_key_select_reg[0]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:12 ; elapsed = 00:05:38 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 952 ; free virtual = 11713
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:56 ; elapsed = 00:05:19 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 598 ; free virtual = 11988
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -724,13 +720,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:20 ; elapsed = 00:05:45 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 828 ; free virtual = 11591
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:02 ; elapsed = 00:05:25 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 470 ; free virtual = 11868
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:05:20 ; elapsed = 00:05:45 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 826 ; free virtual = 11589
+Finished Timing Optimization : Time (s): cpu = 00:05:02 ; elapsed = 00:05:25 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 468 ; free virtual = 11866
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -741,8 +737,10 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (memAddr_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (memAddr_reg[14]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:05:20 ; elapsed = 00:05:45 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 824 ; free virtual = 11587
+Finished Technology Mapping : Time (s): cpu = 00:05:02 ; elapsed = 00:05:25 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 467 ; free virtual = 11865
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -765,24 +763,25 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[15] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[14] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[13] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[12] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[11] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[10] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[9] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[8] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[7] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[6] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[5] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[4] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[3] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[2] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[1] to constant 0
-INFO: [Synth 8-3295] tying undriven pin osc_bank1/blk_mem_gen_0:dina[0] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[15] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[14] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[13] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[12] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[11] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[10] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[9] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[8] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[7] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[6] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[5] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[4] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[3] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[2] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[1] to constant 0
+INFO: [Synth 8-3295] tying undriven pin blk_mem_gen_0:dina[0] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:21 ; elapsed = 00:05:47 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 825 ; free virtual = 11588
+Finished IO Insertion : Time (s): cpu = 00:05:04 ; elapsed = 00:05:27 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 466 ; free virtual = 11865
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -795,7 +794,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:21 ; elapsed = 00:05:47 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 825 ; free virtual = 11588
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:04 ; elapsed = 00:05:27 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 466 ; free virtual = 11865
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -807,25 +806,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:21 ; elapsed = 00:05:47 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 825 ; free virtual = 11588
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:04 ; elapsed = 00:05:27 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 466 ; free virtual = 11865
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:05:21 ; elapsed = 00:05:47 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 825 ; free virtual = 11588
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:04 ; elapsed = 00:05:27 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 466 ; free virtual = 11865
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:05:21 ; elapsed = 00:05:47 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 825 ; free virtual = 11588
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:04 ; elapsed = 00:05:27 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 466 ; free virtual = 11865
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:05:21 ; elapsed = 00:05:47 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 825 ; free virtual = 11588
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:04 ; elapsed = 00:05:27 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 466 ; free virtual = 11865
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -841,112 +840,111 @@ Report Cell Usage:
 +------+-----------+------+
 |      |Cell       |Count |
 +------+-----------+------+
-|1     |LUT2       |    16|
-|2     |LUT3       |     6|
-|3     |LUT4       |    10|
-|4     |LUT5       |    21|
-|5     |LUT6       |    43|
+|1     |LUT2       |    17|
+|2     |LUT3       |     4|
+|3     |LUT4       |     8|
+|4     |LUT5       |    20|
+|5     |LUT6       |    39|
 |6     |MUXF7      |    18|
 |7     |MUXF8      |     9|
 |8     |RAMB36E1   |    16|
 |9     |RAMB36E1_1 |     7|
 |10    |RAMB36E1_2 |     7|
-|11    |FDRE       |    30|
-|12    |LD         |    17|
+|11    |FDRE       |    13|
+|12    |LD         |    15|
 +------+-----------+------+
 
 Report Instance Areas: 
-+------+---------------------------------------------------+------------------------------------------+------+
-|      |Instance                                           |Module                                    |Cells |
-+------+---------------------------------------------------+------------------------------------------+------+
-|1     |top                                                |                                          |   200|
-|2     |  inst                                             |top                                       |   200|
-|3     |    AxiSupporter1                                  |Axi4LiteSupporter                         |    37|
-|4     |    osc_bank1                                      |OscBank                                   |   138|
-|5     |      blk_mem_gen_0                                |blk_mem_gen_0                             |   117|
-|6     |        U0                                         |blk_mem_gen_v8_4_3                        |   117|
-|7     |          inst_blk_mem_gen                         |blk_mem_gen_v8_4_3_synth                  |   117|
-|8     |            \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top                           |   117|
-|9     |              \valid.cstr                          |blk_mem_gen_generic_cstr                  |   117|
-|10    |                \bindec_a.bindec_inst_a            |bindec                                    |    13|
-|11    |                \has_mux_a.A                       |blk_mem_gen_mux                           |    71|
-|12    |                \ramloop[0].ram.r                  |blk_mem_gen_prim_width                    |     1|
-|13    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper                  |     1|
-|14    |                \ramloop[10].ram.r                 |blk_mem_gen_prim_width__parameterized9    |     1|
-|15    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized9  |     1|
-|16    |                \ramloop[11].ram.r                 |blk_mem_gen_prim_width__parameterized10   |     1|
-|17    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized10 |     1|
-|18    |                \ramloop[12].ram.r                 |blk_mem_gen_prim_width__parameterized11   |     1|
-|19    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized11 |     1|
-|20    |                \ramloop[13].ram.r                 |blk_mem_gen_prim_width__parameterized12   |     1|
-|21    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized12 |     1|
-|22    |                \ramloop[14].ram.r                 |blk_mem_gen_prim_width__parameterized13   |     1|
-|23    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized13 |     1|
-|24    |                \ramloop[15].ram.r                 |blk_mem_gen_prim_width__parameterized14   |     1|
-|25    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized14 |     1|
-|26    |                \ramloop[16].ram.r                 |blk_mem_gen_prim_width__parameterized15   |     2|
-|27    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized15 |     2|
-|28    |                \ramloop[17].ram.r                 |blk_mem_gen_prim_width__parameterized16   |     2|
-|29    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized16 |     2|
-|30    |                \ramloop[18].ram.r                 |blk_mem_gen_prim_width__parameterized17   |     2|
-|31    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized17 |     2|
-|32    |                \ramloop[19].ram.r                 |blk_mem_gen_prim_width__parameterized18   |     2|
-|33    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized18 |     2|
-|34    |                \ramloop[1].ram.r                  |blk_mem_gen_prim_width__parameterized0    |     1|
-|35    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized0  |     1|
-|36    |                \ramloop[20].ram.r                 |blk_mem_gen_prim_width__parameterized19   |     2|
-|37    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized19 |     2|
-|38    |                \ramloop[21].ram.r                 |blk_mem_gen_prim_width__parameterized20   |     2|
-|39    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized20 |     2|
-|40    |                \ramloop[22].ram.r                 |blk_mem_gen_prim_width__parameterized21   |     2|
-|41    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized21 |     2|
-|42    |                \ramloop[2].ram.r                  |blk_mem_gen_prim_width__parameterized1    |     1|
-|43    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized1  |     1|
-|44    |                \ramloop[3].ram.r                  |blk_mem_gen_prim_width__parameterized2    |     2|
-|45    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized2  |     2|
-|46    |                \ramloop[4].ram.r                  |blk_mem_gen_prim_width__parameterized3    |     1|
-|47    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized3  |     1|
-|48    |                \ramloop[5].ram.r                  |blk_mem_gen_prim_width__parameterized4    |     2|
-|49    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized4  |     2|
-|50    |                \ramloop[6].ram.r                  |blk_mem_gen_prim_width__parameterized5    |     1|
-|51    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized5  |     1|
-|52    |                \ramloop[7].ram.r                  |blk_mem_gen_prim_width__parameterized6    |     2|
-|53    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized6  |     2|
-|54    |                \ramloop[8].ram.r                  |blk_mem_gen_prim_width__parameterized7    |     1|
-|55    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized7  |     1|
-|56    |                \ramloop[9].ram.r                  |blk_mem_gen_prim_width__parameterized8    |     1|
-|57    |                  \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized8  |     1|
-|58    |    rsa_math                                       |exponentiate                              |     2|
-+------+---------------------------------------------------+------------------------------------------+------+
++------+-------------------------------------------------+------------------------------------------+------+
+|      |Instance                                         |Module                                    |Cells |
++------+-------------------------------------------------+------------------------------------------+------+
+|1     |top                                              |                                          |   173|
+|2     |  inst                                           |top                                       |   173|
+|3     |    blk_mem_gen_0                                |blk_mem_gen_0                             |   117|
+|4     |      U0                                         |blk_mem_gen_v8_4_3                        |   117|
+|5     |        inst_blk_mem_gen                         |blk_mem_gen_v8_4_3_synth                  |   117|
+|6     |          \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top                           |   117|
+|7     |            \valid.cstr                          |blk_mem_gen_generic_cstr                  |   117|
+|8     |              \bindec_a.bindec_inst_a            |bindec                                    |    13|
+|9     |              \has_mux_a.A                       |blk_mem_gen_mux                           |    71|
+|10    |              \ramloop[0].ram.r                  |blk_mem_gen_prim_width                    |     1|
+|11    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper                  |     1|
+|12    |              \ramloop[10].ram.r                 |blk_mem_gen_prim_width__parameterized9    |     1|
+|13    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized9  |     1|
+|14    |              \ramloop[11].ram.r                 |blk_mem_gen_prim_width__parameterized10   |     1|
+|15    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized10 |     1|
+|16    |              \ramloop[12].ram.r                 |blk_mem_gen_prim_width__parameterized11   |     1|
+|17    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized11 |     1|
+|18    |              \ramloop[13].ram.r                 |blk_mem_gen_prim_width__parameterized12   |     1|
+|19    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized12 |     1|
+|20    |              \ramloop[14].ram.r                 |blk_mem_gen_prim_width__parameterized13   |     1|
+|21    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized13 |     1|
+|22    |              \ramloop[15].ram.r                 |blk_mem_gen_prim_width__parameterized14   |     1|
+|23    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized14 |     1|
+|24    |              \ramloop[16].ram.r                 |blk_mem_gen_prim_width__parameterized15   |     2|
+|25    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized15 |     2|
+|26    |              \ramloop[17].ram.r                 |blk_mem_gen_prim_width__parameterized16   |     2|
+|27    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized16 |     2|
+|28    |              \ramloop[18].ram.r                 |blk_mem_gen_prim_width__parameterized17   |     2|
+|29    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized17 |     2|
+|30    |              \ramloop[19].ram.r                 |blk_mem_gen_prim_width__parameterized18   |     2|
+|31    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized18 |     2|
+|32    |              \ramloop[1].ram.r                  |blk_mem_gen_prim_width__parameterized0    |     1|
+|33    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized0  |     1|
+|34    |              \ramloop[20].ram.r                 |blk_mem_gen_prim_width__parameterized19   |     2|
+|35    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized19 |     2|
+|36    |              \ramloop[21].ram.r                 |blk_mem_gen_prim_width__parameterized20   |     2|
+|37    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized20 |     2|
+|38    |              \ramloop[22].ram.r                 |blk_mem_gen_prim_width__parameterized21   |     2|
+|39    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized21 |     2|
+|40    |              \ramloop[2].ram.r                  |blk_mem_gen_prim_width__parameterized1    |     1|
+|41    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized1  |     1|
+|42    |              \ramloop[3].ram.r                  |blk_mem_gen_prim_width__parameterized2    |     2|
+|43    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized2  |     2|
+|44    |              \ramloop[4].ram.r                  |blk_mem_gen_prim_width__parameterized3    |     1|
+|45    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized3  |     1|
+|46    |              \ramloop[5].ram.r                  |blk_mem_gen_prim_width__parameterized4    |     2|
+|47    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized4  |     2|
+|48    |              \ramloop[6].ram.r                  |blk_mem_gen_prim_width__parameterized5    |     1|
+|49    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized5  |     1|
+|50    |              \ramloop[7].ram.r                  |blk_mem_gen_prim_width__parameterized6    |     2|
+|51    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized6  |     2|
+|52    |              \ramloop[8].ram.r                  |blk_mem_gen_prim_width__parameterized7    |     1|
+|53    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized7  |     1|
+|54    |              \ramloop[9].ram.r                  |blk_mem_gen_prim_width__parameterized8    |     1|
+|55    |                \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized8  |     1|
+|56    |    AxiSupporter1                                |Axi4LiteSupporter                         |    37|
+|57    |    rsa_math                                     |exponentiate                              |     4|
++------+-------------------------------------------------+------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:05:21 ; elapsed = 00:05:47 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 825 ; free virtual = 11588
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:04 ; elapsed = 00:05:27 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 466 ; free virtual = 11865
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 212 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:05:17 ; elapsed = 00:05:41 . Memory (MB): peak = 2177.188 ; gain = 381.273 ; free physical = 878 ; free virtual = 11641
-Synthesis Optimization Complete : Time (s): cpu = 00:05:22 ; elapsed = 00:05:47 . Memory (MB): peak = 2177.188 ; gain = 535.023 ; free physical = 878 ; free virtual = 11641
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:59 ; elapsed = 00:05:22 . Memory (MB): peak = 2175.078 ; gain = 387.578 ; free physical = 519 ; free virtual = 11917
+Synthesis Optimization Complete : Time (s): cpu = 00:05:04 ; elapsed = 00:05:27 . Memory (MB): peak = 2175.078 ; gain = 533.328 ; free physical = 519 ; free virtual = 11917
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 74 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 72 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2177.188 ; gain = 0.000 ; free physical = 818 ; free virtual = 11578
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2175.078 ; gain = 0.000 ; free physical = 465 ; free virtual = 11864
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 17 instances were transformed.
-  LD => LDCE: 17 instances
+  A total of 15 instances were transformed.
+  LD => LDCE: 15 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
 262 Infos, 168 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:05:28 ; elapsed = 00:05:55 . Memory (MB): peak = 2177.188 ; gain = 759.492 ; free physical = 909 ; free virtual = 11674
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2177.188 ; gain = 0.000 ; free physical = 906 ; free virtual = 11673
+synth_design: Time (s): cpu = 00:05:10 ; elapsed = 00:05:33 . Memory (MB): peak = 2175.078 ; gain = 748.922 ; free physical = 563 ; free virtual = 11962
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2175.078 ; gain = 0.000 ; free physical = 563 ; free virtual = 11962
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/media/Second/workspace/Research/bus_test/bus_test.runs/design_1_top_0_0_synth_1/design_1_top_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1174] Renamed 57 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2201.199 ; gain = 0.000 ; free physical = 889 ; free virtual = 11658
+INFO: [Coretcl 2-1174] Renamed 56 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2199.090 ; gain = 0.000 ; free physical = 559 ; free virtual = 11960
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/media/Second/workspace/Research/bus_test/bus_test.runs/design_1_top_0_0_synth_1/design_1_top_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_top_0_0_utilization_synth.rpt -pb design_1_top_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 01:27:20 2020...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  8 01:50:50 2020...

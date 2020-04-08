@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Tue Mar 31 01:27:19 2020
+-- Date        : Wed Apr  8 01:50:49 2020
 -- Host        : manjaro running 64-bit Manjaro Linux
 -- Command     : write_vhdl -force -mode synth_stub
 --               /media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/design_1_top_0_0_stub.vhdl

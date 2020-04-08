@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date             : Tue Mar 31 01:29:30 2020
+| Date             : Wed Apr  8 01:52:47 2020
 | Host             : manjaro running 64-bit Manjaro Linux
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.003 |        3 |       --- |             --- |
-| Slice Logic             |     0.001 |     1552 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      470 |     53200 |            0.88 |
+| Slice Logic             |     0.001 |     1547 |       --- |             --- |
+|   LUT as Logic          |     0.001 |      464 |     53200 |            0.87 |
 |   Register              |    <0.001 |      664 |    106400 |            0.62 |
 |   CARRY4                |    <0.001 |       18 |     13300 |            0.14 |
-|   LUT as Shift Register |    <0.001 |       48 |     17400 |            0.28 |
-|   Others                |     0.000 |      204 |       --- |             --- |
-| Signals                 |     0.001 |     1113 |       --- |             --- |
+|   LUT as Shift Register |    <0.001 |       49 |     17400 |            0.28 |
+|   Others                |     0.000 |      202 |       --- |             --- |
+| Signals                 |     0.001 |     1111 |       --- |             --- |
 | PS7                     |     1.529 |        1 |       --- |             --- |
 | Static Power            |     0.141 |          |           |                 |
 | Total                   |     1.676 |          |           |                 |

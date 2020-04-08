@@ -60,13 +60,13 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 2
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part_repo_paths {/home/gurthang/.Xilinx/Vivado/2019.1/xhub/board_store} [current_project]

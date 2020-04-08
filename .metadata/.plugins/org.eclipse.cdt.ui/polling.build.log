@@ -1,0 +1,42 @@
+19:06:22 **** Build of configuration Debug for project polling ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../polling_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:53:
+../../polling_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:13: warning: unused variable 'delay' [-Wunused-variable]
+  const long delay = 100000000;
+             ^~~~~
+../src/helloworld.c:62:15: warning: unused variable 'ts' [-Wunused-variable]
+  XTime * end, ts;
+               ^~
+../src/helloworld.c:62:10: warning: unused variable 'end' [-Wunused-variable]
+  XTime * end, ts;
+          ^~~
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../polling_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: polling.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../polling_bsp/ps7_cortexa9_0/lib -o "polling.elf" ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: polling.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size polling.elf  |tee "polling.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29916	   1544	  23256	  54716	   d5bc	polling.elf
+Finished building: polling.elf.size
+ 
+
+19:06:23 Build Finished (took 1s.553ms)
+

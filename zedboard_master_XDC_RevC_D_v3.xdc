@@ -343,6 +343,23 @@ set_property PACKAGE_PIN B22 [get_ports {FMC_LA33_N}];  # "FMC-LA33_N"
 set_property PACKAGE_PIN B21 [get_ports {FMC_LA33_P}];  # "FMC-LA33_P"
 
 
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[0].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[1].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[2].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[3].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[4].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[5].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[6].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[7].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[8].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[9].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[10].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[11].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[12].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[13].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[14].osc/osc/osc_clk]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/osc_bank1/genblk1[15].osc/osc/osc_clk]
+
 # ----------------------------------------------------------------------------
 # IOSTANDARD Constraints
 #

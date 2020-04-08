@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "top,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_top_0_0,top,{}" *)
-(* CORE_GENERATION_INFO = "design_1_top_0_0,top,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG,C_S_AXI_ADDR_WIDTH=16,C_S_AXI_DATA_WIDTH=32,INITIAL=32,DELAY=63,READ_MAX=10000,VIRUS=7000,START_ADDR=0x0000FFFC,KEY_ADDR=0x0000FFF8,READY_ADDR=0x0000FFF4,RESULT_ADDR=0x0000FFF0,MEM_WIDTH=16,RSA_WIDTH=128}" *)
+(* CORE_GENERATION_INFO = "design_1_top_0_0,top,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG,C_S_AXI_ADDR_WIDTH=16,C_S_AXI_DATA_WIDTH=32,INITIAL=32,DELAY=63,READ_MAX=10000,VIRUS=7000,START_ADDR=0x0000FFFC,KEY_ADDR=0x0000FFF8,READY_ADDR=0x0000FFF4,RESULT_ADDR=0x0000FFF0,RSA_WIDTH=128,ADD_WIDTH=16,MEM_WIDTH=16}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_top_0_0 (
@@ -131,8 +131,9 @@ input wire S_AXI_RREADY;
     .KEY_ADDR(32'H0000FFF8),
     .READY_ADDR(32'H0000FFF4),
     .RESULT_ADDR(32'H0000FFF0),
-    .MEM_WIDTH(16),
-    .RSA_WIDTH(128)
+    .RSA_WIDTH(128),
+    .ADD_WIDTH(16),
+    .MEM_WIDTH(16)
   ) inst (
     .S_AXI_ACLK(S_AXI_ACLK),
     .S_AXI_ARESETN(S_AXI_ARESETN),

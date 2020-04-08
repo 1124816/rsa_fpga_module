@@ -1,4 +1,4 @@
-01:32:18 **** Build of configuration Debug for project hello_test ****
+01:55:11 **** Build of configuration Debug for project hello_test ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -24,5 +24,5 @@ arm-none-eabi-size hello_test.elf  |tee "hello_test.elf.size"
 Finished building: hello_test.elf.size
  
 
-01:32:19 Build Finished (took 974ms)
+01:55:12 Build Finished (took 876ms)
 

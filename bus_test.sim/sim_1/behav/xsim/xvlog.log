@@ -1,0 +1,86 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/axi4litesupporter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Axi4LiteSupporter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/clk_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/osc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module osc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/osc_bank.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OscBank
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/osc_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module osc_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Selector
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'M_OUT' is not allowed [/media/Second/workspace/Research/bus_test/selector.v:31]
+WARNING: [VRFC 10-3028] 'M_OUT' was previously declared with a range [/media/Second/workspace/Research/bus_test/selector.v:31]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'E_OUT' is not allowed [/media/Second/workspace/Research/bus_test/selector.v:32]
+WARNING: [VRFC 10-3028] 'E_OUT' was previously declared with a range [/media/Second/workspace/Research/bus_test/selector.v:32]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'N_OUT' is not allowed [/media/Second/workspace/Research/bus_test/selector.v:33]
+WARNING: [VRFC 10-3028] 'N_OUT' was previously declared with a range [/media/Second/workspace/Research/bus_test/selector.v:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/Second/workspace/Research/bus_test/rsa.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module exponentiate
+INFO: [VRFC 10-311] analyzing module modularMultiplication
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2458] undeclared symbol CLOCK, assumed default net type wire [/media/Second/workspace/Research/bus_test/top.v:137]
+INFO: [VRFC 10-2458] undeclared symbol clk_count, assumed default net type wire [/media/Second/workspace/Research/bus_test/top.v:139]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/bus_test.ip_user_files/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_processing_system7_0_0
+INFO: [VRFC 10-311] analyzing module design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/bus_test.ip_user_files/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xbar_1_axi_crossbar_v2_1_20_addr_arbiter_sasd
+INFO: [VRFC 10-311] analyzing module design_1_xbar_1_axi_crossbar_v2_1_20_axi_crossbar
+INFO: [VRFC 10-311] analyzing module design_1_xbar_1_axi_crossbar_v2_1_20_crossbar_sasd
+INFO: [VRFC 10-311] analyzing module design_1_xbar_1_axi_crossbar_v2_1_20_decerr_slave
+INFO: [VRFC 10-311] analyzing module design_1_xbar_1_axi_crossbar_v2_1_20_splitter
+INFO: [VRFC 10-311] analyzing module design_1_xbar_1_axi_crossbar_v2_1_20_splitter__parameterized0
+INFO: [VRFC 10-311] analyzing module design_1_xbar_1_axi_register_slice_v2_1_19_axic_register_slice
+INFO: [VRFC 10-311] analyzing module design_1_xbar_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/bus_test.ip_user_files/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_rst_ps7_0_100M_1_cdc_sync
+INFO: [VRFC 10-311] analyzing module design_1_rst_ps7_0_100M_1_cdc_sync_0
+INFO: [VRFC 10-311] analyzing module design_1_rst_ps7_0_100M_1
+INFO: [VRFC 10-311] analyzing module design_1_rst_ps7_0_100M_1_lpf
+INFO: [VRFC 10-311] analyzing module design_1_rst_ps7_0_100M_1_proc_sys_reset
+INFO: [VRFC 10-311] analyzing module design_1_rst_ps7_0_100M_1_sequence_psr
+INFO: [VRFC 10-311] analyzing module design_1_rst_ps7_0_100M_1_upcnt_n
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/bus_test.ip_user_files/bd/design_1/ip/design_1_top_0_0/sim/design_1_top_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_top_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/bus_test.ip_user_files/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_axi_protocol_converter
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_ar_channel
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_aw_channel
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_b_channel
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_cmd_translator
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_cmd_translator_1
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_incr_cmd
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_incr_cmd_2
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_r_channel
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_rd_cmd_fsm
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_simple_fifo
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_simple_fifo__parameterized0
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_simple_fifo__parameterized1
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_simple_fifo__parameterized2
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_wr_cmd_fsm
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_wrap_cmd
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_wrap_cmd_3
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_register_slice_v2_1_19_axi_register_slice
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_register_slice_v2_1_19_axic_register_slice
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_register_slice_v2_1_19_axic_register_slice_0
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_register_slice_v2_1_19_axic_register_slice__parameterized1
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0_axi_register_slice_v2_1_19_axic_register_slice__parameterized2
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/bus_test.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-311] analyzing module design_1_ps7_0_axi_periph_0
+INFO: [VRFC 10-311] analyzing module m00_couplers_imp_15SPJYW
+INFO: [VRFC 10-311] analyzing module m01_couplers_imp_XU9C55
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_UYSKKA
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/bus_test.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/Second/workspace/Research/bus_test/bus_test.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'glbl' [/media/Second/workspace/Research/bus_test/bus_test.sim/sim_1/behav/xsim/glbl.v:6]
